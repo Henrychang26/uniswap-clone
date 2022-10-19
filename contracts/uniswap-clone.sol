@@ -35,7 +35,9 @@ contract UniswapClone {
         }
         balanceOf[msg.sender] = balanceOf[msg.sender] - _ethAmount;
         emit BalanceUpdated(msg.sender);
-        
+    }
 
+    function getBalance() public view returns(uint256){
+        return balanceOf[msg.sender];
     }
 }
